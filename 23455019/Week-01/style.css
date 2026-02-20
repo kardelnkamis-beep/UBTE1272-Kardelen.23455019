@@ -1,0 +1,42 @@
+:root {
+  --arka-plan: black;
+  --yazi-rengi: white;
+  --kutu-rengi: gray;
+  --sari: yellow;
+  --mavi: blue;
+  --acik-gri: #d3d3d3;
+}
+
+body {
+  background-color: var(--arka-plan);
+  color: var(--yazi-rengi);
+}
+
+.kutulari-yan-yana-dizen-div {
+  display: flex;
+}
+
+.hizmet-kutusu {
+  background-color: var(--kutu-rengi);
+  width: 200px;
+  height: 250px;
+  border: 5px solid red;
+  margin: 10px;
+  padding: 15px;
+}
+
+.hizmet-kutusu:nth-child(odd) {
+  background-color: var(--acik-gri) !important;
+  color: black;
+}
+
+.hizmet-kutusu[data-isim="csharp"] {
+  border: 5px solid var(--mavi) !important;
+}
+.hizmet-kutusu[data-isim="yapay-zeka"] {
+  border: 5px solid var(--sari) !important;
+}
+
+.hizmet-kutusu[data-isim="arduino"] + .hizmet-kutusu {
+  box-shadow: 10px 10px 5px green;
+}
